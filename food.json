@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Naija Fried Rice",
+        "image":"./images/food1.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 10
+    },
+    {
+        "id": 2,
+        "name": "Fried Meaty Spagetti",
+        "image":"./images/food2.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 12
+    },
+    {
+        "id": 3,
+        "name": "Fried Yam With Stew",
+        "image":"./images/food3.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 9
+    },
+    {
+        "id": 4,
+        "name": "Spicy Crab Sauce",
+        "image":"./images/food4.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 11
+    },
+    {
+        "id": 5,
+        "name": "Fried Potatoes Sauce",
+        "image":"./images/food5.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 5
+    },
+    {
+        "id": 6,
+        "name": "Crab Olive Sause",
+        "image":"./images/food6.png",
+        "description":"Potato / bread / cheese",
+        "currency":"$",
+        "price": 15
+    }
+]

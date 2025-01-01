@@ -1,0 +1,956 @@
+
+
+@font-face {
+    font-family: myFontbold;
+    src: url(./font/Sailec-Bold.ttf);
+}
+
+@font-face {
+    font-family: myFontmid;
+    src: url(./font/Sailec-Medium.ttf);
+}
+
+@font-face {
+    font-family: myFontreg;
+    src: url(./font/Sailec-Regular.ttf);
+}
+
+
+.flex {
+    display: flex;
+}
+
+header {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+    background-image: url(./images/yellow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-image: url(./images/red-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.navigation a {
+    font-family: myFontreg;
+}
+
+@keyframes jumping {
+    from {
+        top: 55%;
+    }
+    to {
+        top: 49%;
+    }
+}
+
+.jump {
+    animation: jumping 2s infinite alternate ease-in-out;
+}
+
+.dishes {
+    background-image: url(./images/yellow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffd800;
+}
+
+.food-list {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem 2rem 4rem;
+    border-left: 3px solid #e31b0e;
+}
+
+.food-list img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+    text-transform: capitalize;
+}
+
+.hero-text span {
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-family: myFontreg;
+}
+
+.about-image {
+    width: 100%;
+}
+.about-text {
+    width: 100%;
+    font-family: myFontreg;
+}
+
+.about-text h3 {
+    text-transform: uppercase;
+}
+
+.table-btn button,
+.btn-add {
+    background-color: #ffd800;
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-family: myFontmid;
+    margin-top: 2rem;
+}
+
+.btn-add2 {
+    background-color: #ffd800;
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-family: myFontmid;
+}
+
+#container {
+    padding: 3rem;
+}
+
+.currency {
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+}
+
+.food-list h1 {
+    font-family: myFontbold;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnprice h6 {
+    color: black;
+    font-family: myFontmid;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.food-list p {
+    font-family: myFontreg;
+    color: grey;
+}
+
+.cta {
+    position: absolute;
+    z-index: 99;
+}
+
+.cta button {
+    background-color: #ffd800;
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-family: myFontmid;
+}
+
+
+.chef-position{
+    background-color: #ffffff;
+    border-left: 2px solid #e31b0e;
+    width: 100%;
+    align-items: center;
+    padding: .5rem .1rem .2rem 1rem;
+}
+
+.chef-main-container {
+    background-image: url(images/red-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btnprice {
+    color: black;
+    font-family: myFontmid;
+    font-size: 1.2rem;
+    padding-top: 3rem;
+}
+
+.drop-down {
+    display: fixed;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    background-color: #ffffff;
+    width: 88%;
+    margin: 3.8rem 0rem 3rem 1.5rem;
+    border-radius: 1rem;
+
+    /*transform: translateX(-30rem);*/
+}
+
+.drop-down-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: myFontmid;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+    padding-bottom: .1rem;
+}
+
+.cartcontent {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.drop-down img {
+    width: 15%;
+    border-radius: .4rem;
+}
+
+.display-cart {
+    display: none;
+}
+
+.total-container {
+    justify-content: space-between;
+    padding: .5rem 1.5rem;
+}
+
+.cartnum {
+    font-family: myFontmid;
+    background-color: #ffffff;
+    padding: .3rem .6rem;
+}
+
+.total-container .total {
+    font-family: myFontbold;
+}
+
+.t-amount {
+    gap: .5rem;
+}
+
+.dishes-header,
+.chef-header {
+    text-align: center;
+    padding-top: 2rem;
+    font-family: myFontbold;
+}
+
+.chef-header,
+.chef-text {
+    color: #ffffff;
+}
+
+.dishes-sub-text,
+.chef-text{
+    text-align: center;
+    font-family: myFontreg;
+}
+
+.subscribe {
+    position: relative;
+    width: 100%;
+}
+
+.email input {
+    width: 18rem;
+    padding: 1rem 1rem 2.8rem 1rem;
+    border: none;
+    outline: none;
+}
+
+.email ::placeholder {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.mail__box button {
+    margin-top: 0rem;
+    position: absolute;
+    bottom: 1%;
+    left: 13%;
+    background-color: #ffd800;
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-family: myFontmid;
+}
+
+.newsletter h1 {
+    font-family: myFontbold;
+}
+
+.newsletter p {
+    font-family: myFontreg;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #e31b0e;
+}
+
+.footer-main img {
+    filter: invert(1);
+}
+
+footer p {
+    color: #ffffff;
+    font-family: myFontreg;
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+footer h3 {
+    color: #ffd800;
+    font-size: .8rem;
+    font-family: myFontbold;
+    text-transform: uppercase;
+}
+
+.footer-main,
+.footer-time,
+.footer-contact {
+    width: 100%;
+}
+
+.footer-main p {
+    padding-top: 1rem;
+}
+
+.newsletter {
+    background-image: url(./images/yellow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.sm-navigation[data-visible = "false"] {
+    display: none;
+    transform: translateX(0%);
+}
+
+.sm-navigation[data-visible = "true"] {
+    display: block;
+    transform: translateX(0%);
+}
+
+.drop-down[data-visible = "false"] {
+    display: none;
+    transform: translateX(0%);
+}
+
+.drop-down[data-visible = "true"] {
+    display: block;
+    transform: translateX(0%);
+}
+
+.subscribe span {
+    position: absolute;
+    padding-top: 1rem;
+}
+
+#msg {
+    font-family: myFontreg;
+}
+
+.chef-main-container {
+    background-color: #e31b0e;
+}
+
+.empty-message {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: myFontreg;
+}
+
+.drop-header {
+    font-family: myFontbold;
+    padding: 1rem 1rem .2rem 1rem;
+}
+
+.delete-btn {
+    padding-top: .5rem;
+}
+
+.cart-container-text {
+    font-family: myFontreg;
+    font-size: 1rem;
+    color: #1e1e1ef4;
+    padding-top: 1rem;
+}
+
+.total-container {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.434);
+}
+
+.total-container h3,
+.total-container h6 {
+    font-family: myFontbold;
+    font-size: 1rem;
+}
+
+.total-container h6 {
+    color: rgb(58, 58, 58);
+}
+
+.check-out-container {
+    padding: 1rem 1.5rem;
+}
+
+.check-out {
+    width: 100%;
+    background-color: #ffd800;
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-family: myFontmid;
+}
+
+
+
+
+
+@media screen and (min-width: 770px) {
+    header {
+        min-height: 39rem;
+    }
+
+    .left-nav-item {
+        gap: 3rem;
+    }
+    
+    .right-nav-item {
+        gap: 3rem;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 3rem;
+        padding-top: 1.5rem;
+    }
+
+    .sm-logo,
+    .sm-navigation {
+        display: none;
+    }
+
+    .navigation a {
+        color: black;
+        font-size: .9rem;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding-top: 1rem;
+    }
+
+    .cta {
+        top: 62%;
+        margin-left: 3.5rem;
+        margin-top: 8rem;
+    }
+
+    .burger img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .2s ease;
+        z-index: 99;
+        width: 40%;
+    }
+
+    .sauce {
+        position: absolute;
+        right: 8%;
+        bottom: 50%;
+        width: 15%;
+    }
+
+    .hero-text {
+        position: absolute;
+        margin-top: 8rem;
+    }
+
+    .discount {
+        position: absolute;
+        top: 60%;
+        z-index: 99;
+        padding-left: 3.5rem;
+        font-size: 2rem;
+        font-family: myFontbold;
+        color: #ffffff;
+    }
+
+    .discount span {
+        font-size: .7rem;
+        text-transform: uppercase;
+        font-family: myFontmid;
+        margin-top: -1rem;
+        letter-spacing: 2px;
+    }
+
+
+    .copy{
+        position: absolute;
+        top: 70%;
+        z-index: 99;
+        right: 8%;
+        border-left: 2px solid #ffd800;
+        padding-left: 1rem;
+        color: #ffffff;
+    }
+
+    .hero-text,
+    .hero-text span,
+    .hero-text h1 {
+        padding-left: 3.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+        font-family: myFontbold;
+    }
+
+    .about {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 5rem 11rem;
+        align-items: center;
+    }
+
+    .cartnum {
+        font-size: .7rem;
+    }
+
+    .dishlist {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .dishes {
+        padding: 1rem 8rem;
+    }
+
+    .about-text p,
+    .about-text h3 {
+        font-size: .9rem;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+
+    .chef {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    
+#chef {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.chefs-box {
+    background-color: #ffd800;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 1rem;
+}
+
+.chefs-box img {
+    object-fit: cover;
+    min-height: 10rem;
+    min-width: 10rem;
+}
+
+.try-chef {
+    padding: 3rem;
+}
+
+.food-list h1 {
+    font-size: 1.4rem;
+    padding-bottom: .2rem;
+}
+
+.menu-hamburger {
+    display: none;
+}
+
+.cart-icon {
+    padding-bottom: .1rem;
+}
+
+.chef-position h5{
+    font-family: myFontmid;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.chef-position p{
+    font-family: myFontreg;
+    font-size: .6rem;
+    text-transform: uppercase;
+}
+
+.newsletter .container{
+    justify-content: space-between;
+    padding: 7rem 6rem;
+}
+
+footer .container{
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+    padding: 4rem 0rem;
+}
+
+.cart-icon {
+    padding-top: .6rem;
+    position: relative;
+}
+
+.cartnum {
+    position: absolute;
+    left: 1.2rem;
+    top: 0rem;
+    font-size: .6rem;
+    border-radius: 50%;
+}
+
+.nav-logo img{
+    width: 70%;
+    padding-top: 1rem;
+}
+
+.mail__box {
+    background-image: linear-gradient(to right, #e31b0e, 0%, #e31b0e , 45%, transparent 45%);
+    padding: 2rem;
+    padding-bottom: 2rem;
+}
+
+.drop-down {
+    width: 300px;
+    right: 100px;
+    top: 10px;
+}
+
+.drop-down p {
+    font-family: myFontbold;
+    color: #1c1c1c;
+    padding-top: 1rem;
+}
+
+.cart-container-text {
+    font-size: .8rem;
+}
+
+.delete-btn {
+    padding-top: .8rem;
+}
+
+    
+    
+}
+
+@media screen and (max-width:770px){
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        position: fixed;
+        z-index: 999;
+        background-color: #ffd800;
+    }
+
+
+    header {
+        min-height: 33rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .sauce,
+    .copy {
+        display: none;
+    }
+
+    .burger {
+        z-index: 99;
+    }
+
+    .burger img{
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        transition: all .2s ease;
+        width: 90%;
+    }
+
+
+    .hero-text {
+        position: absolute;
+        margin-top: 6rem;
+    }
+
+    .cta {
+        position: absolute;
+        top: 60%;
+        top: 62%;
+        margin-left: 1.5rem;
+        margin-top: 6rem;
+    }
+
+    .discount {
+        position: absolute;
+        top: 60%;
+        z-index: 99;
+        padding-left: 1.5rem;
+        font-size: 2rem;
+        font-family: myFontbold;
+        color: #ffffff;
+    }
+
+    .discount span {
+        font-size: .7rem;
+        text-transform: uppercase;
+        font-family: myFontmid;
+        margin-top: -1rem;
+        letter-spacing: 2px;
+    }
+
+    .about-text p,
+    .about-text h3 {
+        font-size: .7rem;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem 2rem;
+        align-items: center;
+    }
+
+    .about-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 90%;
+    }
+
+    .dishlist {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+
+    #chef {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    
+    #chef {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 2rem 0rem 0rem;
+        overflow: hidden;
+        
+    }
+
+    .chefs-box {
+        background-color: #ffd800;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding: 1rem;
+    }
+    
+    .chefs-box img {
+        object-fit: cover;
+        min-height: 25rem;
+        min-width: 25rem;
+    
+    }
+
+    .chef-position {
+        width: 100%;
+    }
+
+    .left-nav-item a,
+    .right-nav-item a {
+        display: none;
+    }
+
+    .lg-logo {
+        display: none;
+    }
+
+    .menu-hamburger {
+        font-family: myFontreg;
+        font-size: .8rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cartcontent h1,
+    .cartcontent p {
+        font-family: myFontmid;
+        font-size: 1rem;
+        padding-top: .7rem;
+        color: gray;
+    }
+
+    .food-list h1 {
+        font-family: myFontbold;
+        font-size: 1.4rem;
+        padding-bottom: .2rem;
+    }
+
+    .chef-position h5{
+        font-family: myFontmid;
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+    
+    .chef-position p{
+        font-family: myFontreg;
+        font-size: .6rem;
+        text-transform: uppercase;
+    }
+
+    .newsletter .container{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 6rem 2rem;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .sm-logo{
+        width: 75%;
+        padding: 1rem;
+    }
+
+    .cart-icon {
+        padding-top: .6rem;
+        position: relative;
+    }
+
+    .cartnum {
+        position: absolute;
+        left: 1.2rem;
+        top: 0rem;
+        font-size: .6rem;
+        border-radius: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        font-family: myFontmid;
+        letter-spacing: -6px;
+        line-height: 3.5rem;
+        padding-left: .5rem;
+    }
+
+    .hero-text span {
+        padding-left: .8rem;
+    }
+
+    .mail__box {
+        background-image: linear-gradient(to right, #e31b0e, 0%, #e31b0e , 75%, transparent 75%);
+        padding: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .emptycart {
+        padding: 1.5rem 1.5rem 0rem 1.5rem;
+    }
+
+    .t-amount{
+        font-family: myFontbold;
+        color: gray;
+    }
+
+    .try-chef {
+        padding-bottom: 5rem;
+    }
+
+    .sm-navigation {
+        background-color: #ffd800;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        padding: 1rem 2rem;
+    }
+
+    .navigation-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .close-nav {
+        text-align: right;
+    }
+
+    .close-nav p {
+        font-family: myFontreg;
+        text-transform: uppercase;
+    }
+
+    .navigation-list a{
+        text-decoration: none;
+        color: #000000;
+        font-family: myFontreg;
+        text-transform: uppercase;
+    }
+
+
+}

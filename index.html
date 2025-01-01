@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GudFood</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="sm-navigation" data-visible="false">
+        <div class="close-nav">
+            <p class="close">Close</p>
+        </div>
+        <div class="navigation-list">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Dishes</a>
+            <a href="">Dinning</a>
+            <a href="">Our Chef</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+
+    <header class="flex">
+        <div class="container navigation">
+            <div class="nav-logo">
+                <img class="sm-logo" src="./images/brand-logo.svg" alt=""> 
+            </div>
+
+            <div class="left-nav-item flex">
+                <a class="nav-link" href="">home</a>
+                <a class="nav-link" href="">about</a>
+                <a class="nav-link" href="">dishes</a>
+            </div>
+            <div class="nav-logo">
+                <img class="lg-logo" src="./images/brand-logo.svg" alt=""> 
+            </div>
+            <div class="right-nav-item flex">
+                <a class="nav-link" href="">Dinning</a>
+                <a class="nav-link" href="">Our chefs</a>
+                <div class="cart-icon">
+                    <img src="./images/cart3.svg" alt=""><span class="cartnum">0</span>
+                </div>
+                
+            </div>
+
+            <div class="menu-hamburger">
+                <p >MENU</p>
+            </div>
+            
+        </div>
+
+        
+
+        <div class="burger jump">
+            <img class="jump" src="./images/burger-img.png" alt="">
+        </div>
+
+        <div class="hero-text container">
+            <span>deal of the week<span> 
+            <h1>Maharaja<br>Mac</h1>
+        </div>
+        
+        <img src="./images/sauce.png" alt="tomatoe sauce" class="sauce"/>
+        <div class="discount">50% <br><span>discount</span></div>
+        <a href="#dishes" class="cta"><button >book a table</button></a>
+        <div class="copy"> <p>Breakfast that’s<br>freshly prepared.</p> <h4>Even if you’re not.</h4> </div>
+        
+    </header>
+
+    
+
+
+    <div class="drop-down" data-visible="false">
+        <div class="drop-down-header">
+            <p class="emptycart">Cart</p> <!--
+            <p class="closecart">Close X</p>-->
+        </div>
+        <div class="empty-message">
+            <p>You Cart is Empty</p>
+        </div>
+
+        <div class="total-container flex">
+            <p class="total">Total</p>
+            <div class="flex t-amount">
+                <span>$</span>
+                <p class="totalvalue">0.00</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="about containe flex">
+        <div class="about-image">
+            <img src="./images/about-img.png" alt="">
+        </div>
+        <div class="about-text">
+            <h1>About Us</h1>
+            <h3>
+                Our team of registered nurses and skilled healthcare professionals provide in-home nursing.
+            </h3>
+            <p>
+                Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line digital divide with additional click-throughs from DevOps immersion along. additional clickthroughsdivide with additional clickthroughs from DevOps. Nanotechnology immersion along from DevOps.
+            </p>
+        </div>
+    </div>
+
+    <div class="dishes ">
+        <div class="dishes-header">
+            <h1>Our Favourite Dishes</h1>
+        </div>
+        <div class="dishes-sub-text">
+            <p>A dependable, compassionate presence you can trust.</p>
+        </div>
+
+        <div class="dishlist" id="container dishes">
+            <!-- <div class="food-list" >
+                 <h3>Spicy Crab<br>Ramen</h3>
+                <img src="./images/food1.png" alt="">
+                <p>Potato / bread / cheese</p>
+                <div class="price flex">
+                    <div class="amount">
+                        <p>10</p>
+                    </div>
+                    <div class="btn-add">
+                        <button>ORDER NOW</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="about containe flex">
+        <div class="about-text">
+            <h1>Ultimate Dinning Experience LikeNo Other</h1>
+            <p>
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum orci quam. Pellentesque habitant morbi tristique se
+            </p>
+            <a href="#dishes" class="table-btn"><button>book a table</button></a>
+        </div>
+
+        <div class="about-image">
+            <img src="./images/dinning-img.png" alt="">
+        </div>
+    </div>
+
+    <div class="chef-main-container">
+        <div class="try-chef container">
+            <div class="chef-header">
+                <h1>Our Chef</h1>
+            </div>
+            <div class="chef-text">
+                <p>Our Chefs are trained specifically to provide quality food.</p>
+            </div>
+            <div class="chef container" id="chef">
+                <div class="chefs-box">
+                    <div class="chef-container">
+                        <img src="./images/janet.png" alt="">
+                        <div class="chef-position">
+                            <h5>janet weah</h5>
+                            <p>master chef</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="chefs-box">
+                    <div class="chef-container">
+                        <img src="./images/mustav.png" alt="">
+                        <div class="chef-position">
+                            <h5>janet weah</h5>
+                            <p>master chef</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="chefs-box">
+                    <div class="chef-container">
+                        <img src="./images/george.png" alt="">
+                        <div class="chef-position">
+                            <h5>janet weah</h5>
+                            <p>master chef</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial"></div>
+
+    <div class="newsletter">
+        <div class="container flex">
+            <div class="newsletter-content">
+                <h1>
+                    Join our Newsletter List
+                </h1>
+                <p>get all the latest offers, discounts and other benefits</p>
+            </div>
+            <div class="subscribe">
+                <div class="mail__box">
+                    <form name="submit-to-google-sheet">
+                        <div class="email">
+                            <input type="email" name="email" placeholder="enter your email"/>
+                        </div>
+                        <button type="submit">subscribe now</button>
+                    </form>
+                </div>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container flex">
+            <div class="footer-main">
+                <img src="./images/brand-logo.svg" alt="">
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui bland itiis praesentium voluptatum deleniti atque corrupti.</p>
+            </div>
+            <div class="footer-time">
+                <div class="ft-header">
+                    <h3>Opening Hour</h3>
+                </div>
+                <div class="ft-content">
+                    <p>Mon - Fri: 8 am - 8 pm</p>
+                    <p>Sat: 9am - 4pm</p>
+                    <p>Sun: Closed</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="ft-header">
+                    <h3>Contact Info</h3>
+                </div>
+    
+                <div class="ft-content">
+                    <p>(1800) 574 9687</p>
+                    <p>No.26, baker Street, Lagos.</p>
+                    <p>Justrestro@contact.co.in</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmsNBTYG16Sxbk6mTZXPOoExV2vXGjFfaSdTmObISPQvytyfIb7NXRWzyxkQAnvZA87A/exec'
+        const form = document.forms['submit-to-google-sheet'];
+        let msg = document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank You for Subscribing!";
+                 setTimeout(function(){
+                    msg.innerHTML = "";
+                 }, 5000)
+                 form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
