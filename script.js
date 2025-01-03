@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+window.addEventListener("scroll", () => {
+    const dropdown = document.querySelector(".drop-down");
+    if (visibility === "true") {
+        dropdown.setAttribute("data-visible", false);
+    }
+});
+
 menuHamburger.addEventListener("click", ()=> {
     const visibility = closeNavContainer.getAttribute("data-visible");
     if(visibility === "false") {
@@ -90,10 +97,30 @@ fetch("food.json")
 });
 
 function addToCart(food){
-    console.log(cart.push(food));
-    saveCartToLocalStorage();
-    updateCartContent();
-    updateCartCount();
+    let productExit = cart.find((item)=> item.id === food.id);
+    if(productExit){
+
+    
+        let addMainContainer = document.querySelector(".added-msg");
+        
+        addMainContainer.classList.remove("hide");
+
+        let addMsgText = document.querySelector(".addmessage");
+        addMsgText.innerHTML=`${food.name} is already in the cart!`;
+
+        
+        let addMsgBtn = document.querySelector(".addmsg-btn");
+        addMsgBtn.addEventListener("click", ()=>{
+            addMainContainer.classList.add("hide");
+        });
+
+    }else{
+        cart.push(food);
+        saveCartToLocalStorage();
+        updateCartContent();
+        updateCartCount();
+    }
+    
 }
 
 function updateCartContent(){
@@ -104,8 +131,17 @@ function updateCartContent(){
     dropDownHeader.innerHTML = "Cart";
     dropDown.appendChild(dropDownHeader);
 
+    if (cart.length === 0) {
+       
+        let emptyMessage = document.createElement("p");
+        emptyMessage.setAttribute("class", "empty-cart-message");
+        emptyMessage.textContent = "Your cart is empty.";
+        dropDown.appendChild(emptyMessage);
+        return; 
+    }
+
     cart.forEach((item, index) => {
-        
+        console.log(index)
         let cartContainer = document.createElement("div");
         cartContainer.setAttribute("class", "cartcontent");
         let cartConImage = document.createElement("img");
@@ -135,9 +171,6 @@ function updateCartContent(){
         cartContainer.appendChild(deleteBtn);
         dropDown.appendChild(cartContainer);
         
-
-
-
     });
 
     let totalContainer = document.createElement("div");
