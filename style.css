@@ -477,14 +477,66 @@ footer h3 {
     font-family: myFontmid;
 }
 
+.inputcontainer{
+    padding: 0rem 1.5rem;
+}
+
+.inputelement {
+    width: 100%;
+    padding: .4rem 1rem;
+    font-family: myFontreg;
+    border: 1px solid rgba(128, 128, 128, 0.434);
+    outline: none;
+}
+
 .hide {
     display: none;
 }
 
+@media (min-width: 760px) and (max-width: 860px) {
+    .dishlist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .chef {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .about {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 5rem 5rem;
+        align-items: center;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 2400px) {
+    .dishlist {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .chef {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .about {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 5rem 9rem;
+        align-items: center;
+    }
+}
 
 
-
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 760px) {
     header {
         min-height: 39rem;
     }
@@ -586,25 +638,12 @@ footer h3 {
         font-family: myFontbold;
     }
 
-    .about {
-        flex-direction: row;
-        gap: 3rem;
-        padding: 5rem 11rem;
-        align-items: center;
-    }
-
     .cartnum {
         font-size: .7rem;
     }
 
-    .dishlist {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
-    }
-
     .dishes {
-        padding: 1rem 8rem;
+        padding: 3rem 8rem;
     }
 
     .about-text p,
@@ -616,16 +655,8 @@ footer h3 {
         width: 80%;
     }
 
-    .chef {
-        display: flex;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
     
 #chef {
-    display: flex;
-    flex-direction: row;
     gap: 3rem;
     justify-content: center;
     padding: 3rem;
@@ -734,7 +765,7 @@ footer .container{
     
 }
 
-@media screen and (max-width:770px){
+@media screen and (max-width:760px){
     .navigation {
         display: flex;
         justify-content: space-between;
