@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("scroll", () => {
     const dropdown = document.querySelector(".drop-down");
+    const visibility = dropdown.getAttribute("data-visible");
     if (visibility === "true") {
         dropdown.setAttribute("data-visible", false);
     }
@@ -173,16 +174,32 @@ function updateCartContent(){
         
     });
 
+    
+
+
     let totalContainer = document.createElement("div");
     let totalText = document.createElement("h3");
     let totalTextValue = document.createElement("h6");
     totalContainer.setAttribute("class", "total-container");
+    totalTextValue.setAttribute("class", "sum-total");
+
+    let inputContainer = document.createElement("div");
+    let inputElement=document.createElement("input");
+    inputElement.setAttribute("placeholder", "Enter your email");
+    inputContainer.setAttribute("class", "inputcontainer");
+    inputElement.setAttribute("class", "inputelement");
+    inputContainer.appendChild(inputElement);
+    
     
     let checkOutContainer = document.createElement("div");
     checkOutContainer.setAttribute("class", "check-out-container");
     let checkOutBtn = document.createElement("button");
     checkOutBtn.setAttribute("class", "check-out");
-    checkOutBtn.innerHTML="CHECKOUT"
+    checkOutBtn.innerHTML="CHECKOUT";
+    checkOutContainer.addEventListener("click",()=>{
+        payWithPaystack()
+        inputElement.value ="";
+    })
 
     totalText.innerHTML ="Total";
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -190,8 +207,11 @@ function updateCartContent(){
     totalContainer.appendChild(totalText);
     totalContainer.appendChild(totalTextValue);
     dropDown.appendChild(totalContainer);
+    dropDown.appendChild(inputContainer);
     checkOutContainer.appendChild(checkOutBtn)
     dropDown.appendChild(checkOutContainer);
+    
+    
 }
 
 function removeFromCart(index) {
